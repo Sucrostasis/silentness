@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /hidden/
+Disallow: /endings/
+
+# maintenance checksum: 0315
+# null echo path: /hidden/fragment.html

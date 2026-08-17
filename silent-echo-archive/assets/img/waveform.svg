@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <rect width="200" height="60" fill="#f4f4f2"/>
+  <line x1="10" y1="30" x2="190" y2="30" stroke="#1d3a5f" stroke-width="1.5" fill="none">
+    <animate attributeName="stroke-opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+  </line>
+  <!-- 正常波形部分 -->
+  <path d="M10,30 L30,30 L35,28 L40,32 L45,29 L50,31 L55,30 L70,30" 
+        stroke="#1d3a5f" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <!-- 异常凸起部分 -->
+  <path d="M70,30 Q80,15 90,30 Q100,45 110,30 Q120,15 130,30" 
+        stroke="#1d3a5f" stroke-width="2" fill="none"/>
+  <!-- 恢复正常部分 -->
+  <path d="M130,30 L145,30 L150,28 L155,32 L160,29 L165,31 L170,30 L190,30" 
+        stroke="#1d3a5f" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <!-- 标记点 -->
+  <circle cx="100" cy="10" r="3" fill="#ff9800">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

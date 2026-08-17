@@ -1,0 +1,65 @@
+// 文件：index.html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>静默回声声学档案馆 | Silent Echo Sound Archive</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- archive checksum: U0VMRUNULzEvMzk5MQ== -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.svg" alt="SESA Logo">
+            <h1>静默回声声学档案馆</h1>
+        </div>
+        <p class="subtitle">虚构声音资料数字保存计划</p>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="archive.html">档案检索</a>
+            <a href="about.html">关于</a>
+            <a href="contact.html">联系</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>欢迎</h2>
+            <p>静默回声声学档案馆（Silent Echo Sound Archive，简称 SESA）是一个民间数字声音保护项目。我们致力于收集、整理和保存各类历史录音、环境音、广播片段与田野录音。</p>
+            <p>本档案馆于 2009 年启动，2014 年停止更新，2024 年恢复只读访问。</p>
+        </section>
+
+        <section class="search-box">
+            <h3>快速检索</h3>
+            <form action="archive.html" method="get">
+                <input type="text" name="q" placeholder="输入关键词，例如：雨声、街道、广播">
+                <button type="submit">检索</button>
+            </form>
+        </section>
+
+        <section class="featured">
+            <h3>推荐馆藏</h3>
+            <ul id="featured-list">
+                <li><a href="item.html?id=0001">#0001 雨声记录 - 2010</a></li>
+                <li><a href="item.html?id=0003">#0003 旧教室环境音 - 2011</a></li>
+                <li><a href="item.html?id=0005">#0005 广播测试信号 - 1987</a></li>
+                <li><a href="item.html?id=3991">#3991 未命名环境音片段 - 1987</a></li>
+            </ul>
+        </section>
+
+        <section class="system-status">
+            <h3>系统状态</h3>
+            <p>归档系统：<span class="status-dot" id="status-indicator"></span> <span id="status-text">在线（只读）</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2009-2024 静默回声声学档案馆。保留所有权利。</p>
+        <p class="faint-text"><span>校验码 04-12-0315</span></p>
+        <p class="disclaimer">本网站为虚构叙事作品，所有机构、人物与事件均为创作。</p>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+/* 主样式表 - 静默回声声学档案馆 */
+
+/* 全局重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background-color: #f4f4f2;
+    color: #1a1a1a;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+a {
+    color: #1d3a5f;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 布局 */
+header, main, footer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 头部 */
+header {
+    border-bottom: 1px solid #d0d0c8;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #1d3a5f;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+nav {
+    border-top: 1px solid #d0d0c8;
+    padding-top: 10px;
+}
+
+nav a {
+    margin-right: 20px;
+    font-size: 13px;
+}
+
+/* 主内容区 */
+main section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #1d3a5f;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #d0d0c8;
+    padding-bottom: 8px;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+ul, ol {
+    margin-left: 25px;
+    margin-bottom: 12px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* 检索框 */
+.search-box input[type="text"] {
+    width: 70%;
+    padding: 8px 10px;
+    border: 1px solid #d0d0c8;
+    background: #fff;
+    font-size: 13px;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    border: 1px solid #1d3a5f;
+    background: #f4f4f2;
+    color: #1d3a5f;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #e8e8e6;
+}
+
+/* 表格 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th, td {
+    border: 1px solid #d0d0c8;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+th {
+    background: #e8e8e6;
+    font-weight: normal;
+    color: #333;
+}
+
+tr:nth-child(even) {
+    background: #fcfcfb;
+}
+
+tr:hover {
+    background: #f0f0ee;
+}
+
+/* 表单 */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d0d0c8;
+    background: #fff;
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-family: inherit;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    padding: 10px 20px;
+    border: 1px solid #1d3a5f;
+    background: #f4f4f2;
+    color: #1d3a5f;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #e8e8e6;
+}
+
+/* 系统状态灯 */
+.status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #4caf50;
+    margin-right: 8px;
+}
+
+.status-dot.amber {
+    background: #ff9800;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* 隐藏文本 - 仍可被选中 */
+.faint-text {
+    color: #efefec;
+    background: #f4f4f2;
+    font-size: 11px;
+    user-select: all;
+}
+
+.faint-text.clickable {
+    cursor: pointer;
+}
+
+.faint-text.clickable:hover {
+    color: #ccc;
+}
+
+/* 免责声明 */
+.disclaimer {
+    font-size: 11px;
+    color: #999;
+    margin-top: 15px;
+}
+
+/* 页脚 */
+footer {
+    border-top: 1px solid #d0d0c8;
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* 工具类 */
+.hidden {
+    display: none;
+}
+
+.error-message {
+    color: #b71c1c;
+    font-size: 13px;
+    padding: 10px;
+    border: 1px solid #ef9a9a;
+    background: #ffebee;
+}
+
+/* 终端页面专用样式 */
+.terminal-page {
+    background: #0d0d0d;
+    color: #33ff33;
+    font-family: "Courier New", Courier, monospace;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.terminal-page header {
+    border-bottom: 1px solid #333;
+    max-width: none;
+}
+
+.terminal-page main {
+    max-width: 800px;
+}
+
+.terminal-output {
+    background: #0d0d0d;
+    color: #33ff33;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #333;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+}
+
+.terminal-input-line span {
+    color: #33ff33;
+    margin-right: 10px;
+}
+
+.terminal-input-line input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #33ff33;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 13px;
+    outline: none;
+}
+
+.terminal-hint {
+    font-size: 11px;
+    color: #666;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* 维护页面样式 */
+.maintenance-page {
+    background: #1a1a1a;
+    color: #ccc;
+    min-height: 100vh;
+}
+
+.maintenance-page header {
+    display: none;
+}
+
+.maintenance-page main {
+    max-width: 600px;
+    padding-top: 60px;
+}
+
+.maintenance-page h2 {
+    color: #ccc;
+    border-bottom-color: #444;
+}
+
+.maintenance-page input[type="text"] {
+    background: #2a2a2a;
+    border-color: #444;
+    color: #ccc;
+}
+
+.maintenance-page button {
+    background: #2a2a2a;
+    border-color: #666;
+    color: #ccc;
+}
+
+.maintenance-page button:hover {
+    background: #3a3a3a;
+}
+
+/* 结局页面样式 */
+.endings-page {
+    background: #f4f4f2;
+}
+
+.endings-page main {
+    max-width: 600px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.endings-page h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.endings-page .choice-buttons {
+    margin-top: 30px;
+}
+
+.endings-page .choice-buttons button {
+    margin: 0 10px;
+    padding: 12px 25px;
+    font-size: 14px;
+}
+
+.endings-note {
+    font-size: 11px;
+    color: #999;
+    margin-top: 40px;
+    font-style: italic;
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+    header, main, footer {
+        padding: 15px;
+    }
+    
+    .logo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav a {
+        display: block;
+        margin-bottom: 8px;
+    }
+    
+    .search-box input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 6px 8px;
+    }
+}

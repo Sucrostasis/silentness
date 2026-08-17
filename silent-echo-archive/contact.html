@@ -1,0 +1,91 @@
+// 文件：contact.html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>联系 | 静默回声声学档案馆</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.svg" alt="SESA Logo">
+            <h1>静默回声声学档案馆</h1>
+        </div>
+        <p class="subtitle">虚构声音资料数字保存计划</p>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="archive.html">档案检索</a>
+            <a href="about.html">关于</a>
+            <a href="contact.html">联系</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>联系与申请</h2>
+            <p>如您希望进行学术合作、素材调阅或技术咨询，请填写以下表单。我们将在校验完成后返回申请编号。</p>
+            
+            <form id="contact-form">
+                <label for="name">姓名或代号</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">邮箱</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="org">机构</label>
+                <input type="text" id="org" name="org">
+                
+                <label for="type">申请类型</label>
+                <select id="type" name="type">
+                    <option value="research">学术研究</option>
+                    <option value="collaboration">项目合作</option>
+                    <option value="inquiry">一般咨询</option>
+                    <option value="other">其他</option>
+                </select>
+                
+                <label for="message">内容</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+                
+                <button type="submit">提交申请</button>
+            </form>
+            
+            <div id="form-response" style="display:none; margin-top:20px;">
+                <p id="response-text"></p>
+            </div>
+        </section>
+        
+        <p id="silent-hint" class="faint-text" style="display:none;">请勿将静默转成可听见的。</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2009-2024 静默回声声学档案馆。保留所有权利。</p>
+        <p class="disclaimer">本网站为虚构叙事作品，所有机构、人物与事件均为创作。</p>
+    </footer>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var message = document.getElementById('message').value;
+            var responseDiv = document.getElementById('form-response');
+            var responseText = document.getElementById('response-text');
+            var silentHint = document.getElementById('silent-hint');
+            
+            var refNumber = 'REF-' + Math.floor(Math.random() * 9000 + 1000) + '-ARCHIVE';
+            
+            if (message.indexOf('7742') !== -1) {
+                refNumber = 'REF-7742-DO-NOT-ARCHIVE';
+            }
+            
+            responseText.textContent = '申请已收到。系统将在校验完成后返回编号。' + '\n\n' + '申请编号：' + refNumber;
+            responseDiv.style.display = 'block';
+            
+            if (message.indexOf('静默') !== -1 || message.indexOf('回声') !== -1) {
+                silentHint.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

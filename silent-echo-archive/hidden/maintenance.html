@@ -1,0 +1,30 @@
+// 文件：hidden/maintenance.html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>维护索引 | 静默回声声学档案馆</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body class="maintenance-page">
+    <main>
+        <section>
+            <h2>维护索引</h2>
+            <p>回声通道已关闭。</p>
+            <p>如需继续，请验证归档序列。</p>
+            
+            <form id="verification-form" style="margin-top:30px;">
+                <label for="verify-input">归档序列</label>
+                <input type="text" id="verify-input" autocomplete="off" placeholder="输入序列码">
+                <button type="submit">验证</button>
+            </form>
+            
+            <div id="verify-result" style="margin-top:20px;"></div>
+        </section>
+    </main>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/clues.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
